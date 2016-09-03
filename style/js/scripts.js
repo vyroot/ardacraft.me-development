@@ -735,67 +735,101 @@ $(document).ready(function() {
     /*-----------------------------------------------------------------------------------*/
     /*	CIRCLE PROGRESS
     /*-----------------------------------------------------------------------------------*/
-    if ($('.circle-progress-wrapper').length) {
-        var circle1 = new ProgressBar.Circle('.circle.first', {
-            color: '#32bea6',
-            trailColor: 'rgba(0,0,0,0.05)',
-            strokeWidth: 4,
-            trailWidth: 4,
-            duration: 4500,
-            easing: 'easeInOut',
-            text: {
-                value: '0.52'
-            },
-            step: function(state, bar) {
-                bar.setText((bar.value() * 100).toFixed(0));
+    $(function() {
+        var workBookId = '1kwaIWSbGHdetjNNWTKHpmS6FLVqNYNIJ0BZI--smVOI';
+        var workSheetId = 'opb32hw';
+        var url = 'https://spreadsheets.google.com/feeds/cells/' + workBookId + '/' + workSheetId + '/public/basic?alt=json';
+        fetchProgress(url, updateProgress);
+    });
+    function fetchProgress(url, callback) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                var json = JSON.parse(xmlhttp.responseText);
+                var feed = json.feed;
+                var entries = feed.entry || [];
+                var data = {};
+                for (var i = 0; i + 1 < entries.length; i++) {
+                    var key = entries[i].content.$t.toUpperCase();
+                    var value = parseFloat(entries[++i].content.$t) / 100.0;
+                    data[key] = value;
+                }
+                callback(data);
             }
-        });
-        circle1.animate(0.52);
-        var circle2 = new ProgressBar.Circle('.circle.second', {
-            color: '#f2be3e',
-            trailColor: 'rgba(0,0,0,0.05)',
-            strokeWidth: 4,
-            trailWidth: 4,
-            duration: 4500,
-            easing: 'easeInOut',
-            text: {
-                value: '0.02'
-            },
-            step: function(state, bar) {
-                bar.setText((bar.value() * 100).toFixed(0));
-            }
-        });
-        circle2.animate(0.02);
-        var circle3 = new ProgressBar.Circle('.circle.third', {
-            color: '#e04f5f',
-            trailColor: 'rgba(0,0,0,0.05)',
-            strokeWidth: 4,
-            trailWidth: 4,
-            duration: 4500,
-            easing: 'easeInOut',
-            text: {
-                value: '0'
-            },
-            step: function(state, bar) {
-                bar.setText((bar.value() * 100).toFixed(0));
-            }
-        });
-        circle3.animate(0);
-        var circle4 = new ProgressBar.Circle('.circle.fourth', {
-            color: '#954e9d',
-            trailColor: 'rgba(0,0,0,0.05)',
-            strokeWidth: 4,
-            trailWidth: 4,
-            duration: 4500,
-            easing: 'easeInOut',
-            text: {
-                value: '0'
-            },
-            step: function(state, bar) {
-                bar.setText((bar.value() * 100).toFixed(0));
-            }
-        });
-        circle4.animate(0);
+        };
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+    }
+    function updateProgress(progress) {
+        if (('.circle-progress-wrapper').length) {
+
+            /* Gets progress percentage by text content of the div (names must match up with the spreadsheet) */
+            var first = progress[document.getElementById('progress1').textContent.trim().toUpperCase()];
+            var second = progress[document.getElementById('progress2').textContent.trim().toUpperCase()];
+            var third = progress[document.getElementById('progress3').textContent.trim().toUpperCase()];
+            var fourth = progress[document.getElementById('progress4').textContent.trim().toUpperCase()];
+
+            var circle1 = new ProgressBar.Circle('.circle.first', {
+                color: '#32bea6',
+                trailColor: 'rgba(0,0,0,0.05)',
+                strokeWidth: 4,
+                trailWidth: 4,
+                duration: 4500,
+                easing: 'easeInOut',
+                text: {
+                    value: first
+                },
+                step: function(state, bar) {
+                    bar.setText((bar.value() * 100).toFixed(0));
+                }
+            });
+            circle1.animate(first);
+            var circle2 = new ProgressBar.Circle('.circle.second', {
+                color: '#f2be3e',
+                trailColor: 'rgba(0,0,0,0.05)',
+                strokeWidth: 4,
+                trailWidth: 4,
+                duration: 4500,
+                easing: 'easeInOut',
+                text: {
+                    value: second
+                },
+                step: function(state, bar) {
+                    bar.setText((bar.value() * 100).toFixed(0));
+                }
+            });
+            circle2.animate(second);
+            var circle3 = new ProgressBar.Circle('.circle.third', {
+                color: '#e04f5f',
+                trailColor: 'rgba(0,0,0,0.05)',
+                strokeWidth: 4,
+                trailWidth: 4,
+                duration: 4500,
+                easing: 'easeInOut',
+                text: {
+                    value: third
+                },
+                step: function(state, bar) {
+                    bar.setText((bar.value() * 100).toFixed(0));
+                }
+            });
+            circle3.animate(third);
+            var circle4 = new ProgressBar.Circle('.circle.fourth', {
+                color: '#954e9d',
+                trailColor: 'rgba(0,0,0,0.05)',
+                strokeWidth: 4,
+                trailWidth: 4,
+                duration: 4500,
+                easing: 'easeInOut',
+                text: {
+                    value: fourth
+                },
+                step: function(state, bar) {
+                    bar.setText((bar.value() * 100).toFixed(0));
+                }
+            });
+            circle4.animate(fourth);
+        }
     }
     /*-----------------------------------------------------------------------------------*/
 	/*	WOW ANIMATION
