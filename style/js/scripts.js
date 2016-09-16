@@ -761,7 +761,7 @@ $(document).ready(function() {
         xmlhttp.send();
     }
     function updateProgress(progress) {
-        if (('.circle-progress-wrapper').length) {
+        if ($('.circle-progress-wrapper').length) {
 
             /* Gets progress percentage by text content of the div (names must match up with the spreadsheet) */
             var first = progress[document.getElementById('progress1').textContent.trim().toUpperCase()];
