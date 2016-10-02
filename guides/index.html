@@ -433,13 +433,11 @@
                 <p>This category of brushes includes brushes which modify the shape of the region you are selecting.</p>
                 <p>Available mask brushes are:
                   <br>- <code>materialmask</code> - Removes all points in your selected shape where the material in the world at that point does not match your mask material (set with /vr)
-                  <br><img src="https://forums-cdn.spongepowered.org/uploads/default/original/2X/7/793d189213bbc80ac3a2bdf53b1316a5b05f5ac2.png" alt="replace" width="202" height="402">
                   <br>- <code>flatten</code> - Flattens your shape into a 2d disc with each x,z position in the disc set only if there is a point set in the column for that position.
                   <br>- <code>splatter</code> - This brush lets you create blocks in predictable shapes without outright geometric solids. If you've ever used something like photoshop, the idea is rather like turning down the density on a brush.
                   <br>  Parameters:  <code>seed</code> (number) - Determines how likely it is for the brush to generate a new cluster (or "seed") within the shape. It must be between 0 and 1 (1 being a 100% chance).
                   <br>         <code>growth</code> (number) - Determines how likely it is for new voxels to be spawned adjacent to each seed. It must be between 0 and 1 (1 being a 100% chance).
                   <br>         <code>recursions</code> (integer) - Sets how many times the shape is passed over while applying growth, more recursions means more growth. Must be between 1 and 10.
-                  <br><img src="https://forums-cdn.spongepowered.org/uploads/default/original/2X/c/c552778ce08822bcb37d197f1f0ebdf4dfe93800.jpg" alt="splatter" width="250" height="167">
                   <br>- <code>random</code> - Removes blocks from your shape based on a random chance.
                   <br>  Parameters:  <code>rand</code> (number) - Determines how likely it is for a point to be removed from your shape. Must be between 0 and 1 (1 being a 100% chance).</p>
                 <h3>
