@@ -23,9 +23,9 @@ function Fader(interval, fade, urls) {
         }
 
         tp.style.opacity = 0;
-        tp.style.transition = `opacity ${this.fade}s ease-in-out`;
+        tp.style.transition = 'opacity ' + this.fade + 's ease-in-out';
         btm.style.opacity = 1;
-        btm.style.transition = `opacity ${this.fade}s ease-in-out`;
+        btm.style.transition = 'opacity ' + this.fade + 's ease-in-out';
 
         runloop(0, this.urls, btm, tp, this.interval, this.fade);
     };
