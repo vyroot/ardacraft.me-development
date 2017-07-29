@@ -16,8 +16,9 @@
 }
 
 .text-fader-wrapper {
-    top: 45vh;
+    top: 50%;
     width: 100%;
+    transform: translateY(-50%);
     position: absolute;
     text-align: center;
     color: white !important;
