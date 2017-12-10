@@ -736,8 +736,8 @@ $(document).ready(function() {
     /*	CIRCLE PROGRESS
     /*-----------------------------------------------------------------------------------*/
     $(function() {
-        var workBookId = '1kwaIWSbGHdetjNNWTKHpmS6FLVqNYNIJ0BZI--smVOI';
-        var workSheetId = 'opb32hw';
+        var workBookId = '1zEsN0vsilAlTbDgfLyTce1xE1tnn-jiY9kPrVSFA7Ds';
+        var workSheetId = '736473658';
         var url = 'https://spreadsheets.google.com/feeds/cells/' + workBookId + '/' + workSheetId + '/public/basic?alt=json';
         fetchProgress(url, updateProgress);
     });
