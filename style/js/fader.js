@@ -46,9 +46,8 @@ function fadeText(id) {
 }
 
 function runloop(pos, urls, bottom, top, interval) {
-    if (pos >= urls.length) {
-        pos = 0;
-    }
+
+    pos = Math.floor(Math.random() * urls.length) + 0;
 
     lazyload(urls[pos], bottom, top);
 
