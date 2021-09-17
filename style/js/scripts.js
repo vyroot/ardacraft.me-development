@@ -738,7 +738,7 @@ $(document).ready(function() {
     $(function() {
         var workBookId = '1zEsN0vsilAlTbDgfLyTce1xE1tnn-jiY9kPrVSFA7Ds';
         var workSheetId = '736473658';
-        var url = 'https://spreadsheets.google.com/feeds/cells/' + workBookId + '/' + workSheetId + '/public/basic?alt=json';
+        var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + workBookId;
         fetchProgress(url, updateProgress);
     });
     function fetchProgress(url, callback) {
