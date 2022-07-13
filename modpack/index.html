@@ -108,10 +108,10 @@
                             <p class="text-center">The launcher automatically installs the correct Java version, Forge, and mods for you so you just have to click and play!</p>
                           </div>
                           <div class="text-center">
-                            <a href="https://github.com/ArdaCraft/ArdaCraftLauncher/releases/download/v1.8.6/ArdaCraft-Launcher-setup-1.8.6.exe" target="_blank" class="btn btn-aqua">Download for Windows</a>
-                            <a href="https://github.com/ArdaCraft/ArdaCraftLauncher/releases/download/v1.8.6/ArdaCraft-Launcher-setup-1.8.6.AppImage" target="_blank" class="btn btn-aqua">Download for Linux</a>
-                            <a href="https://github.com/ArdaCraft/ArdaCraftLauncher/releases/download/v1.8.6/ArdaCraft-Launcher-setup-1.8.6-x64.dmg" target="_blank" class="btn btn-aqua">Download for Mac</a>
-                            <a href="https://github.com/ArdaCraft/ArdaCraftLauncher/releases/download/v1.8.6/ArdaCraft-Launcher-setup-1.8.6-arm64.dmg" target="_blank" class="btn btn-aqua">Download for Mac (ARM based)</a>
+                            <a href="https://github.com/ArdaCraft/ArdaCraftLauncher/releases/download/v1.8.10/ArdaCraft-Launcher-setup-1.8.10.exe" target="_blank" class="btn btn-aqua">Download for Windows</a>
+                            <a href="https://github.com/ArdaCraft/ArdaCraftLauncher/releases/download/v1.8.10/ArdaCraft-Launcher-setup-1.8.10.AppImage" target="_blank" class="btn btn-aqua">Download for Linux</a>
+                            <a href="https://github.com/ArdaCraft/ArdaCraftLauncher/releases/download/v1.8.10/ArdaCraft-Launcher-setup-1.8.10-x64.dmg" target="_blank" class="btn btn-aqua">Download for Mac</a>
+                            <a href="https://github.com/ArdaCraft/ArdaCraftLauncher/releases/download/v1.8.10/ArdaCraft-Launcher-setup-1.8.10-arm64.dmg" target="_blank" class="btn btn-aqua">Download for Mac (ARM based)</a>
                           </div>
                           <!-- /.container -->
                         </div>
@@ -121,10 +121,10 @@
                         <h4 id="downloading-">Downloading:</h4>
                         <p>Start off by downloading the launcher from our GitHub page:</p>
                         <ul>
-                          <li>If you're on Windows grab the <code>.exe</code> <a href="https://github.com/ArdaCraft/ArdaCraftLauncher/releases/download/v1.8.6/ArdaCraft-Launcher-setup-1.8.6.exe">here</a></li>
-                          <li>If you're on Linux grab the <code>.AppImage</code> <a href="https://github.com/ArdaCraft/ArdaCraftLauncher/releases/download/v1.8.6/ArdaCraft-Launcher-setup-1.8.6.AppImage">here</a></li>
-                          <li>If you're on Mac grab the <code>.dmg</code> <a href="https://github.com/ArdaCraft/ArdaCraftLauncher/releases/download/v1.8.6/ArdaCraft-Launcher-setup-1.8.6-x64.dmg">here</a></li>
-                          <li>If you're on Mac that uses and ARM processor, grab the <code>.dmg</code> <a href="https://github.com/ArdaCraft/ArdaCraftLauncher/releases/download/v1.8.6/ArdaCraft-Launcher-setup-1.8.6-arm64.dmg">here</a></li>
+                          <li>If you're on Windows grab the <code>.exe</code> <a href="https://github.com/ArdaCraft/ArdaCraftLauncher/releases/download/v1.8.10/ArdaCraft-Launcher-setup-1.8.10.exe">here</a></li>
+                          <li>If you're on Linux grab the <code>.AppImage</code> <a href="https://github.com/ArdaCraft/ArdaCraftLauncher/releases/download/v1.8.10/ArdaCraft-Launcher-setup-1.8.10.AppImage">here</a></li>
+                          <li>If you're on Mac grab the <code>.dmg</code> <a href="https://github.com/ArdaCraft/ArdaCraftLauncher/releases/download/v1.8.10/ArdaCraft-Launcher-setup-1.8.10-x64.dmg">here</a></li>
+                          <li>If you're on Mac that uses and ARM processor, grab the <code>.dmg</code> <a href="ttps://github.com/ArdaCraft/ArdaCraftLauncher/releases/download/v1.8.10/ArdaCraft-Launcher-setup-1.8.10-arm64.dmg">here</a></li>
                         </ul>
                         <p><strong>You may get a message that says this is not a trusted program or that it may be dangerous</strong></p>
                         <ul>
@@ -198,24 +198,25 @@
         <div class="container inner2">
           <h3>How to self-install:</h3>
           <ol>
-            <li>First install <a href="http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.2.html">Forge</a> for Minecraft 1.12.2.</li>
-            <li>Run Minecraft with the Forge profile enabled.</li>
-            <li>You will see multiple folders within the self-install zip you downdloaded from above.</li>
-            <li>The 'files' directory contains configuration files for Minecraft. It also includes the Resourcepacks. You can copy the contents of this folder into your <code>.minecraft</code> folder.</li>
-            <li>The 'forgemods' directory contains all the Forge mods we use on the server. There is a 'required' folder inside this directory. You MUST move these mods in to your <code>.minecraft/mods</code> folder in order to join. There is also two folders with 'optional' names. 'optionaloff' means the launcher does not have these mods selected by default, 'optionalon' means these mods are selected by default and reccomended.</li>
-            <li>The 'litemods' directory contains all the Litemods we use on the server. These are optional and you can install them if you wish.</li>
-            <li>Again, everything from the self install files goes in your <code>.minecraft</code> folder. To find this follow <a href="https://help.minecraft.net/hc/en-us/articles/360035131551-Where-are-Minecraft-files-stored-" target="_blank">this</a> guide on how to get to it. Then move the files in the 'files' folder there and mods from 'forgemods' and 'litemods' into the <code>mods</code> folder.
-            <li>After everything is moved into your .minecraft folder launch the game again with the Forge profile selected.</li>
-            <li>Once you are on the main menu screen, go to <code>Options</code> then <code>Resource Packs...</code> and move the <code>AC_Overlay.zip</code> file above the <code>Conquest Reforged.zip</code>
-              <ul>
-                <li>This is what your Resource Packs page should look like:</li>
-              </ul></li>
-            </ol>
-            <p><img src="https://i.imgur.com/fO8umXF.png" alt="alt text"></p>
-            <ol start="9">
-              <li>You now have everything you need to join the server. The IP is <code>mc.ardacraft.me</code>.</li>
-            </ol>
-          </div>
+            <li>Download and install <a href="https://files.minecraftforge.net/net/minecraftforge/forge/" target="_blank">Forge for 1.18.2</a>. When prompted, select te client version.</li>
+            <p><img src="https://d3vvphh84jsfh3.cloudfront.net/original/2X/9/9fb70bdb7f8e5d28e25f730a9a6d1568d9ae149a.png" alt="Forge Download"></p>
+            <li>Run the Forge profile in your Minecraft launcher, and keep Minecraft open.</li>
+            <p><img src="https://d3vvphh84jsfh3.cloudfront.net/original/2X/8/8b29041f5cc56de1e2ae96ed1c23f6e145255ce3.jpeg" alt="Forge Profile"></p>
+            <li>Download the <a href="https://drive.google.com/file/d/1oPih6mA7lV_9vkcFFI7s1NPndDUFfJm1/view?usp=sharing" target="_blank">ArdaCraft mod list for 1.18.2</a>.</li>
+            <li>From the Minecraft main menu, click ‘Options’, ‘Resource Packs’, and ‘Open Pack Folder’. This will open the folder where your Minecraft is installed. Go up one folder to the .minecraft folder, and you will see a folder called ‘mods’.</li>
+            <li>Drag and drop the ArdaCraft mod list zip file into the mods folder. Right click on the zip file and unzip it. Your mods folder should now look something like this:</li>
+            <p><img src="https://d3vvphh84jsfh3.cloudfront.net/original/2X/9/926283a427ad13ffa7e4b2ed195f8a24df5efd2a.png" alt="Mod List">
+            <p><li>Go back to the resource packs folder and drop these two zip files in there (do not unzip them!):</p>
+            <p><a href="https://www.curseforge.com/minecraft/texture-packs/conquest-reforged-resource-pack/files/3854057">Conquest Reforged Resource Pack</a></p>
+            <p><a href="https://drive.google.com/file/d/1WxE9ZH_J_U3Hfzx9QpZw3jfb9UAIvcqC/view?usp=sharing">AC Overlay</a> </p></li>
+            <li>Close Minecraft. You may want to assign more RAM at this stage:</li>
+            <p><img src="https://d3vvphh84jsfh3.cloudfront.net/original/2X/d/dca46844d35e73a67c8f93fd14508cad62e5366c.png" alt="Adding RAM 1"></p>
+            <p><img src="https://d3vvphh84jsfh3.cloudfront.net/original/2X/c/c4660860eac749d720573ffb5e89f56f9f80dc5a.png" alt="Adding RAM 2"></p>
+            <p>In this example, we're using 15GB of RAM. Then launch the game. This will launch Minecraft with the correct mods.</p>
+            <li>When Minecraft is re-launched, it’s time to enable the resource packs. Go to your resource packs screen and set both the CR resource pack and the AC Overlay to be on the right hand side under ‘Selected’, like this:</li>
+            <p><img src="https://d3vvphh84jsfh3.cloudfront.net/original/2X/f/fb22e4d1b13b40d5d5eeac33d85fd5ff50d8adef.png" alt="Resource Pack Order"></p>
+            <li>You&#39;re done! Access the server at <code>mc.ardacraft.me</code></li>
+          </ol>
           <!--/.container -->
         </div>
         <!-- /.post-content -->
