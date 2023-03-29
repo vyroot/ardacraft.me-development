@@ -736,6 +736,8 @@ $(document).ready(function() {
     /*	CIRCLE PROGRESS
     /*-----------------------------------------------------------------------------------*/
     $(function() {
+        const CLIENT_ID = '<YOUR_CLIENT_ID>';
+        const API_KEY = '<YOUR_API_KEY>';
         var workBookId = '1zEsN0vsilAlTbDgfLyTce1xE1tnn-jiY9kPrVSFA7Ds';
         var workSheetId = '736473658';
         var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + workBookId;
